@@ -8,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class TodoService {
 
-  apiUrl: string = 'http://localhost:8080/todos'
+  apiUrl: string = 'https://super-todo-list-api.herokuapp.com/todos'
 
   constructor(private http: HttpClient) { }
 
