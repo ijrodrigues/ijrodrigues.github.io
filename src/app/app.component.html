@@ -14,10 +14,10 @@
             </form>
             <div class="list-wrapper">
               <ul class="d-flex flex-column-reverse todo-list">
-                <li *ngFor="let todo of todos">
-                  <div class="form-check">
+                <li *ngFor="let todo of todos" (click)="switchTodoStatus(todo)">
+                  <div class="form-check" >
                     <label class="form-check-label">
-                      <input (click)="switchTodoStatus(todo)"> <label [ngClass]="{'completed': todo.done}" class="todo-item">{{todo.description}}</label> <span class="badge bg-secondary">{{todo.doneAt}}</span>
+                      <input> <label [ngClass]="{'completed': todo.done}" class="todo-item">{{todo.description}}</label> <span class="badge bg-secondary">{{todo.doneAt}}</span>
                       <i class="input-helper"></i>
                     </label>
                   </div>
